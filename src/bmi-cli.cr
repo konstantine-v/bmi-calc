@@ -2,11 +2,22 @@ VERSION = "0.1.0"
 require "admiral"
 
 class BmiValues < Admiral::Command
-  define_flag planet
-  define_flag name : String, long: name
-  define_flag units : String, default: "Imperial", long: units
-  define_flag height : Float64, default: 5.11, long: height
-  define_flag weight : Int32, default: 180, long: height
+  define_help description: "A command that returns your BMI by passing data in via flags."
+  define_flag name : String,
+              description: "Just put in your first naem with no spaces.",
+              long: name
+  define_flag units : String,
+              default: "Imperial",
+              description: "The Type of units you wish to use, note that only Imperial work at the moment.",
+              long: units
+  define_flag height : Float64,
+              default: 5.11,
+              description: "This is your height in feet (ex 5.11).",
+              long: height
+  define_flag weight : Int32,
+              default: 180,
+              description: "This is your weight in pounds (ex 180).",
+              long: weight
 
   def run
     if (flags.name != nil)
