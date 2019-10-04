@@ -17,16 +17,23 @@ Requires Admiral Shard
 ## Usage
 
 You can use the tool by running a command from the binary you created (and moved). This will work like any old binary.
-`./bmi-cli.cr --height=6.5 --weight=190`
+`./bmi-cli --height=6.5 --weight=190 --name=Jimbob --units=Imperial`
 
 This should output something like...
 ```
+Hey JimBob!
 Calculating BMI...
-Your BMI is: 33.65298080200366
-You're considered: Obese
+Your BMI is: 20.798816568047336
+You're considered: Normal
 ```
 
-You can change the output to fit whatever project, like a csv file for example: `./bmi-cli.cr --height=6.5 --weight=190 >> log.csv`
+There's also defaults set so that if a field is missing it'll have something to pass through
+Right now the defaults are;
+- `units`  -> `"Imperial"`
+- `height` -> `5.11`
+- `weight` -> `180`
+
+You can change the output to fit whatever project, like a csv file for example: `./bmi-cli --height=6.5 --weight=190 >> log.csv`
 
 ## Development/Contributing
 
