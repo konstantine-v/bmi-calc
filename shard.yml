@@ -1,0 +1,15 @@
+name: bmi-cli
+version: 0.1.0
+authors:
+  - Konstantine <@MaterialFuture>
+
+targets:
+  bmi-cli:
+    main: src/bmi-cli.cr
+
+dependencies:
+  admiral:
+    github: jwaldrip/admiral.cr
+
+crystal: 0.31.1
+license: MIT
