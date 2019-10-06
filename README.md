@@ -12,9 +12,11 @@ Requires Admiral Shard
 
 - Install using `shards install`
 - `crystal build src/bmi-cli.cr`
-- `mv bmi-cli.cr bin/`
+- `mv bmi-cli bin/ && mv bmi-cli.dwarf bin/`
 
 ## Usage
+
+Run `bin/bmi-cli --help` to see help screen with all info on it.
 
 You can use the tool by running a command from the binary you created (and moved). This will work like any old binary.
 `./bmi-cli --height=6.5 --weight=190 --name=Jimbob --units=Imperial`

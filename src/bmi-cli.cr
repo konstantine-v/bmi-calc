@@ -1,4 +1,4 @@
-VERSION = "0.1.0"
+VERSION = "0.1.2"
 require "admiral"
 
 class BmiValues < Admiral::Command
@@ -12,11 +12,11 @@ class BmiValues < Admiral::Command
               long: units
   define_flag height : Float64,
               default: 5.11,
-              description: "This is your height in feet (ex 5.11).",
+              description: "This is your height in feet.",
               long: height
   define_flag weight : Int32,
               default: 180,
-              description: "This is your weight in pounds (ex 180).",
+              description: "This is your weight in pounds.",
               long: weight
 
   def run
@@ -41,6 +41,7 @@ class BmiValues < Admiral::Command
 
       puts "Your BMI is: #{total_BMI}"
       puts "You're considered: #{bmi_string}"
+      # puts "#{name}, #{total_BMI},#{bmi_string}," # For Logging
     else
       puts "Error, not sure what happened, try again..."
       exit
