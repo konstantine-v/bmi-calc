@@ -3,10 +3,11 @@
 [![Language](https://img.shields.io/badge/language-crystal-776791.svg)](https://github.com/crystal-lang/crystal)
 ![Status](https://img.shields.io/badge/status-WIP-blue.svg)
 
-A CLI tool to calculate your BMI, written in Crystal Lang.
+A simple CLI tool to calculate your BMI, written in Crystal Lang.
 
 Requires Admiral Shard
 
+*Please Note* - This only works with Imperial Units as of currently, the idea is to have this working with Metric units much like the earlier version of this.
 
 ## Installation / Development
 
@@ -34,6 +35,7 @@ Right now the defaults are;
 - `units`  -> `"Imperial"`
 - `height` -> `5.11`
 - `weight` -> `180`
+To see all defaults run `bin/bmi-cli --help`.
 
 You can change the output to fit whatever project, like a csv file for example: `./bmi-cli --height=6.5 --weight=190 >> log.csv`
 
@@ -50,4 +52,15 @@ Feel free to extend this project however you wish
 
 ## Contributors
 
-- [Konstantine](https://github.com/your-github-user) - creator and maintainer
+- [@MaterialFuture](https://github.com/materialfuture) - Creator and Maintainer
+
+
+### Notes
+
+*Please Note* - This only works with Imperial Units as of currently, the idea is to have this working with Metric units much like the earlier version of this.
+
+This is still a work in progress, the BMI calculation will include; a different more modern equation, include age, and have option to output from the flags (if that's reasonable).
+
+I'm also going to have you be able to specify how you want your files to be output so you get the data how you want.
+
+Tests will also need to be written just for debugging (and practice for myself)
