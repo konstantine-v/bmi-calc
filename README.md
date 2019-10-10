@@ -20,7 +20,10 @@ Requires Admiral Shard
 Run `bin/bmi-cli --help` to see help screen with all info on it.
 
 You can use the tool by running a command from the binary you created (and moved). This will work like any old binary.
-`./bmi-cli --height=6.5 --weight=190 --name=Jimbob --units=Imperial`
+`./bmi-cli` - This will pass in all the defaults through so you can see how it works
+
+You can pass in your own flags to input your own data
+`./bmi-cli imperial --height=6.5 --weight=190 --name=Jimbob `
 
 This should output something like...
 ```
