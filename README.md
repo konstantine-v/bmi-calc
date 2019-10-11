@@ -5,9 +5,7 @@
 
 A simple CLI tool to calculate your BMI, written in Crystal Lang.
 
-Requires Admiral Shard
-
-*Please Note* - This only works with Imperial Units as of currently, the idea is to have this working with Metric units much like the earlier version of this.
+*Requires Admiral Shard*
 
 ## Installation / Development
 
@@ -23,7 +21,12 @@ You can use the tool by running a command from the binary you created (and moved
 `./bmi-cli` - This will pass in all the defaults through so you can see how it works
 
 You can pass in your own flags to input your own data
+
 `./bmi-cli imperial --height=6.5 --weight=190 --name=Jimbob `
+
+You can pass in your own flags to input your own data
+
+`./bmi-cli metric --height=1.3 --weight=80 --name=Jimbob `
 
 This should output something like...
 ```
@@ -38,6 +41,7 @@ Right now the defaults are;
 - `units`  -> `"Imperial"`
 - `height` -> `5.11`
 - `weight` -> `180`
+
 To see all defaults run `bin/bmi-cli --help`.
 
 You can change the output to fit whatever project, like a csv file for example: `./bmi-cli --height=6.5 --weight=190 >> log.csv`
@@ -57,13 +61,11 @@ Feel free to extend this project however you wish
 
 - [@MaterialFuture](https://github.com/materialfuture) - Creator and Maintainer
 
-
 ### Notes
 
-*Please Note* - This only works with Imperial Units as of currently, the idea is to have this working with Metric units much like the earlier version of this.
-
-This is still a work in progress, the BMI calculation will include; a different more modern equation, include age, and have option to output from the flags (if that's reasonable).
-
-I'm also going to have you be able to specify how you want your files to be output so you get the data how you want.
-
-Tests will also need to be written just for debugging (and practice for myself)
+This is still a work in progress, I plan to add some things later on; 
+- Age to calculation
+- Having option to specify output from the flags
+- Flag to specify output
+- Tests so that way this app feels more legitimate and so I can get more practice
+- Refactor and make it easier to read, maybe more comments?

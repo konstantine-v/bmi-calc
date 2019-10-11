@@ -1,4 +1,4 @@
-VERSION = "0.1.2"
+VERSION = "0.2.2"
 require "admiral"
 
 class BmiValues < Admiral::Command
@@ -22,7 +22,6 @@ class BmiValues < Admiral::Command
     if (flags.name != nil)
       puts "Hello #{flags.name}!"
     end
-    puts "Calculating BMI..."
 
     if (arguments.units == "imperial")
 
@@ -60,7 +59,7 @@ class BmiValues < Admiral::Command
       # puts "#{name}, #{total_BMI},#{bmi_string}," # For Logging
 
     else
-      puts "Error, not sure what unit, try again..."
+      puts "Error, not sure what unit you specified, try again..."
       exit
     end
   end
