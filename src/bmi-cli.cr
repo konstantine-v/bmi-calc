@@ -2,6 +2,7 @@ VERSION = "0.2.2"
 require "admiral"
 
 class BmiValues < Admiral::Command
+  define_version VERSION
   define_help description: "A command that returns your BMI by passing data in via flags."
   define_flag name : String,
     description: "Just put in your first naem with no spaces.",
@@ -24,7 +25,6 @@ class BmiValues < Admiral::Command
     end
 
     if (arguments.units == "imperial")
-
       calc_height = flags.height * 12
       total_BMI = 703 * flags.weight / (calc_height * calc_height)
 
