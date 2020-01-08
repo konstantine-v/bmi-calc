@@ -5,19 +5,21 @@
 
 A simple CLI tool to calculate your BMI, written in Crystal Lang.
 
-*Requires Admiral Shard*
-
 ## Installation / Development
 
 - Install using `shards install`
 - `crystal build src/bmi-cli.cr`
 - `mv bmi-cli bin/ && mv bmi-cli.dwarf bin/`
 
+Alternatively you can use Cake (Crystal make) by just running `cake`
+
 ## Usage
 
 Run `bin/bmi-cli --help` to see help screen with all info on it.
 
-You can use the tool by running a command from the binary you created (and moved). This will work like any old binary.
+This is run simply be accessing the class: `BmiValues::Calculate.new(height, weight, units)`
+
+You can also use the tool by running a command from the binary you created (and moved). This will work like any old binary.
 `./bmi-cli` - This will pass in all the defaults through so you can see how it works
 
 You can pass in your own flags to input your own data
@@ -30,7 +32,6 @@ You can pass in your own flags to input your own data
 
 This should output something like...
 ```
-Hey JimBob!
 Calculating BMI...
 Your BMI is: 20.798816568047336
 You're considered: Normal
@@ -51,7 +52,7 @@ You can change the output to fit whatever project, like a csv file for example: 
 If you want to contribute, just make a pull request and I'll merge it in if it's relivant. I'd recommend just forking though.
 Feel free to extend this project however you wish
 
-1. Fork it (<https://github.com/your-github-user/bmi-cli/fork>)
+1. Fork it (<https://github.com/materialfuture/bmi-cli/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -64,8 +65,7 @@ Feel free to extend this project however you wish
 ### Notes
 
 This is still a work in progress, I plan to add some things later on; 
-- Age to calculation
 - Having option to specify output from the flags
+- Verify the metric calculations
 - Flag to specify output
-- Tests so that way this app feels more legitimate and so I can get more practice
-- Refactor and make it easier to read, maybe more comments?
+- Flag for age
